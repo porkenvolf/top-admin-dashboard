@@ -1,26 +1,81 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
+.container {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr; 
+    grid-template-rows: 1fr;
 }
-.sidebar{
-    background: #000;
+.sidebar {
+    background: #a7a7a7;
     min-width: 200px;
+    display: grid;
+    align-content: start;
+    gap: 50px;
 }
-.main{
+.main {
     display: grid;
     grid-template-rows: 1fr 5fr;
 }
-.header{
+.header {
     background: red;
     min-height: 150px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
-.main-body{
+.upper-header {
+    display: flex;
+}
+.upper-header > input {
+    flex: 1;
+    height: 30px;
+}
+.lower-header {
+    display: flex;
+}
+.lower-header > .user-name {
+    flex: 1;
+}
+.main-body {
     background: green;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 50% 50%;
+}
+.announcements {
+    display: grid;
+    min-height: 0;
+    min-width: 0;
+    overflow: scroll;
+}
+.announcements .announcements-body {
+}
+.each-announcement {
+}
+
+.each-trending {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+.each-trending > .user-pic {
+    grid-row: 1 / -1;
+}
+.each-trending > .handle {
+    grid-column: 2;
+}
+.each-trending > .user-name {
+    grid-column: 2;
+}
+.projects {
+    grid-row: 1 / 3;
+}
+.projects-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
