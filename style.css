@@ -1,12 +1,19 @@
-
+:root {
+    --primary: #1992d4;
+}
 .container {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr;
 }
+
+
+/* 
+▄▀▀ █ █▀▄ ██▀ ██▄ ▄▀▄ █▀▄ 
+▄█▀ █ █▄▀ █▄▄ █▄█ █▀█ █▀▄  */
 .sidebar {
-    background: #1992d4;
+    background: var(--primary);
     color: rgb(239, 239, 239);
     min-width: 200px;
     display: grid;
@@ -14,55 +21,111 @@
     gap: 50px;
     padding: 25px;
 }
-.sidebar > .title{
+.sidebar > .title {
     font-size: 2rem;
     font-weight: bold;
     display: flex;
     align-items: center;
 }
-.sidebar > .title > img{
+.sidebar > .title > img {
     filter: invert(1);
     width: 3rem;
 }
-.sidebar li{
+.sidebar li {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
-.sidebar li img{
+.sidebar li img {
     filter: invert(1);
     width: 1.2rem;
     margin-right: 0.5rem;
 }
 
-.sidebar > ul{
+.sidebar > ul {
     list-style-type: none;
     font-size: 1.2rem;
     font-weight: bold;
 }
+
+/* 
+█▄ ▄█ ▄▀▄ █ █▄ █ 
+█ ▀ █ █▀█ █ █ ▀█  */
 .main {
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 8fr;
 }
+
+/* 
+█▄█ ██▀ ▄▀▄ █▀▄ ██▀ █▀▄ 
+█ █ █▄▄ █▀█ █▄▀ █▄▄ █▀▄  */
 .header {
-    background: red;
+    padding: 20px 40px;
+    background: rgb(244, 244, 244);
     min-height: 150px;
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
+.header .icon {
+    width: 1.5rem;
+}
 .upper-header {
     display: flex;
+    align-items: center;
 }
 .upper-header > input {
     flex: 1;
     height: 30px;
 }
-.lower-header {
+.upper-header .right {
+    align-items: center;
     display: flex;
+    gap: 25px;
+    font-weight: bold;
+}
+.upper-header input {
+    border-radius: 50px;
+    border: none;
+    background-color: #e2e8f0;
+    margin: 0 50px;
+    padding: 20px;
+}
+.upper-header .profile-pic {
+    width: 3.5rem;
+}
+.lower-header {
+    color: rgb(38, 38, 38);
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }
 .lower-header > .user-name {
     flex: 1;
+    display: grid;
+    align-content: center;
+    font-weight: bold;
 }
+.lower-header > .user-name > .upper {
+    font-size: 0.9rem;
+}
+.lower-header > .user-name > .lower {
+    font-size: 1.8rem;
+}
+.lower-header .profile-pic {
+    width: 5.5rem;
+}
+.lower-header button {
+    height: 3rem;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+}
+
+/* 
+█▄ ▄█ ▄▀▄ █ █▄ █ 
+█ ▀ █ █▀█ █ █ ▀█  */
 .main-body {
     background: green;
     display: grid;

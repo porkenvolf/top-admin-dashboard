@@ -16,6 +16,6 @@ input,
 textarea,
 select,
 button {
-    width: 150px;
+    width: 120px;
     box-sizing: border-box;
 }
