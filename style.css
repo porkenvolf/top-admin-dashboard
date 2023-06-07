@@ -1,5 +1,7 @@
 :root {
     --primary: #1992d4;
+    --secondary: #F0B429;
+    --grey: #e2e8f0;
 }
 .container {
     height: 100vh;
@@ -7,7 +9,6 @@
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr;
 }
-
 
 /* 
 ▄▀▀ █ █▀▄ ██▀ ██▄ ▄▀▄ █▀▄ 
@@ -53,7 +54,20 @@
 █ ▀ █ █▀█ █ █ ▀█  */
 .main {
     display: grid;
-    grid-template-rows: 1fr 8fr;
+    grid-template-rows: 11rem 1fr;
+}
+.main-body {
+    background: var(--grey);
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 50% 50%;
+    padding: 25px;
+    gap: 25px;
+}
+.main-body  .section-title {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-bottom: 15px;
 }
 
 /* 
@@ -86,7 +100,7 @@
 .upper-header input {
     border-radius: 50px;
     border: none;
-    background-color: #e2e8f0;
+    background-color: var(--grey);
     margin: 0 50px;
     padding: 20px;
 }
@@ -123,15 +137,6 @@
     font-weight: bold;
 }
 
-/* 
-█▄ ▄█ ▄▀▄ █ █▄ █ 
-█ ▀ █ █▀█ █ █ ▀█  */
-.main-body {
-    background: green;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: 50% 50%;
-}
 .announcements {
     display: grid;
     min-height: 0;
@@ -157,6 +162,10 @@
 .each-trending > .user-name {
     grid-column: 2;
 }
+
+/* 
+█▀▄ █▀▄ ▄▀▄   █ ██▀ ▄▀▀ ▀█▀ ▄▀▀ 
+█▀  █▀▄ ▀▄▀ ▀▄█ █▄▄ ▀▄▄  █  ▄█▀  */
 .projects {
     grid-row: 1 / 3;
 }
@@ -164,4 +173,27 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+}
+.projects .each-project{
+    display: grid;
+    gap: 25px;
+    background-color: white;
+    border-left: 10px solid var(--secondary);
+    padding: 25px;
+    border-radius: 10px;
+}
+.projects .each-project .title{
+    font-size: 1.2rem;
+}
+.projects .each-project .text{
+    font-size: 0.9rem;
+    color: rgb(83, 83, 83)
+}
+.projects .each-project .buttons{
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+.projects .each-project .buttons img{
+    width: 1.5rem;
 }
