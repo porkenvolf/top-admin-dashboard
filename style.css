@@ -1,6 +1,6 @@
 :root {
     --primary: #1992d4;
-    --secondary: #F0B429;
+    --secondary: #f0b429;
     --grey: #e2e8f0;
 }
 .container {
@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr;
+    /* overflow: hidden; */
 }
 
 /* 
@@ -64,7 +65,7 @@
     padding: 25px;
     gap: 25px;
 }
-.main-body  .section-title {
+.main-body .section-title {
     font-weight: bold;
     font-size: 1.3rem;
     padding-bottom: 15px;
@@ -137,17 +138,51 @@
     font-weight: bold;
 }
 
+/* 
+▄▀▄ █▄ █ █▄ █ ▄▀▄ █ █ █▄ █ ▄▀▀ ██▀ █▄ ▄█ ██▀ █▄ █ ▀█▀ ▄▀▀ 
+█▀█ █ ▀█ █ ▀█ ▀▄▀ ▀▄█ █ ▀█ ▀▄▄ █▄▄ █ ▀ █ █▄▄ █ ▀█  █  ▄█▀  */
 .announcements {
+    display: grid;
+    max-height: 50vh;
+}
+.announcements .announcements-body {
     display: grid;
     min-height: 0;
     min-width: 0;
     overflow: scroll;
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
 }
-.announcements .announcements-body {
+.announcements-body:after {
+    content: "";
+    height: 20px;
+    display: block;
 }
 .each-announcement {
+    padding: 5px 0;
+}
+.announcements .each-announcement .title {
+    font-size: 1.2rem;
+}
+.announcements .each-announcement .text {
+    font-size: 0.9rem;
+    color: rgb(83, 83, 83);
+}
+.announcements-body::-webkit-scrollbar {
+    height: 0px;
+    width: 5px;
+}
+.announcements-body:hover::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: #b1b1b1;
+    
 }
 
+.announcements-body:hover::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #838383;
+}
 .each-trending {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -174,7 +209,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
-.projects .each-project{
+.projects .each-project {
     display: grid;
     gap: 25px;
     background-color: white;
@@ -182,18 +217,18 @@
     padding: 25px;
     border-radius: 10px;
 }
-.projects .each-project .title{
+.projects .each-project .title {
     font-size: 1.2rem;
 }
-.projects .each-project .text{
+.projects .each-project .text {
     font-size: 0.9rem;
-    color: rgb(83, 83, 83)
+    color: rgb(83, 83, 83);
 }
-.projects .each-project .buttons{
+.projects .each-project .buttons {
     display: flex;
     gap: 15px;
     justify-content: flex-end;
 }
-.projects .each-project .buttons img{
+.projects .each-project .buttons img {
     width: 1.5rem;
 }
