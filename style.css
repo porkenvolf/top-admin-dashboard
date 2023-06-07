@@ -189,6 +189,8 @@
 ▀█▀ █▀▄ ██▀ █▄ █ █▀▄ █ █▄ █ ▄▀  
  █  █▀▄ █▄▄ █ ▀█ █▄▀ █ █ ▀█ ▀▄█  */
 .trending-body {
+
+    max-height: 90%;
     border-radius: 15px;
     background: white;
     padding: 25px;
@@ -224,6 +226,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    overflow-y: scroll;
+    min-height: 0;
+    max-height: 95%;
 }
 .projects .each-project {
     display: grid;
@@ -231,7 +236,7 @@
     background-color: white;
     border-left: 10px solid var(--secondary);
     padding: 25px;
-    border-radius: 10px;
+    border-radius: 10px;127 
     box-shadow: var(--shadow)
 }
 .projects .each-project .title {
@@ -248,4 +253,17 @@
 }
 .projects .each-project .buttons img {
     width: 1.5rem;
+}
+.projects-body::-webkit-scrollbar {
+    height: 0px;
+    width: 5px;
+}
+.projects-body:hover::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: #b1b1b1;
+}
+
+.projects-body:hover::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #838383;
 }
