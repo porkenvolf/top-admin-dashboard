@@ -146,7 +146,7 @@
 █▀█ █ ▀█ █ ▀█ ▀▄▀ ▀▄█ █ ▀█ ▀▄▄ █▄▄ █ ▀ █ █▄▄ █ ▀█  █  ▄█▀  */
 .announcements {
     display: grid;
-    max-height: 50vh;
+    max-height: 37vh;
 }
 .announcements .announcements-body {
     display: grid;
