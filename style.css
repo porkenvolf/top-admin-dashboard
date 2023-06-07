@@ -2,6 +2,8 @@
     --primary: #1992d4;
     --secondary: #f0b429;
     --grey: #e2e8f0;
+    --shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+        rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 .container {
     height: 100vh;
@@ -16,7 +18,7 @@
 ▄█▀ █ █▄▀ █▄▄ █▄█ █▀█ █▀▄  */
 .sidebar {
     background: var(--primary);
-    color: rgb(239, 239, 239);
+    color: white;
     min-width: 200px;
     display: grid;
     align-content: start;
@@ -61,7 +63,7 @@
     background: var(--grey);
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr .1fr;
+    grid-template-rows: 1fr 0.1fr;
     padding: 25px;
     gap: 25px;
 }
@@ -76,10 +78,11 @@
 █ █ █▄▄ █▀█ █▄▀ █▄▄ █▀▄  */
 .header {
     padding: 20px 40px;
-    background: rgb(244, 244, 244);
+    background: white;
     min-height: 150px;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    
 }
 .header .icon {
     width: 1.5rem;
@@ -153,6 +156,7 @@
     background-color: white;
     border-radius: 15px;
     padding: 25px;
+    box-shadow: var(--shadow)
 }
 .announcements-body:after {
     content: "";
@@ -176,7 +180,6 @@
 .announcements-body:hover::-webkit-scrollbar-track {
     border-radius: 5px;
     background: #b1b1b1;
-    
 }
 
 .announcements-body:hover::-webkit-scrollbar-thumb {
@@ -187,11 +190,12 @@
 /* 
 ▀█▀ █▀▄ ██▀ █▄ █ █▀▄ █ █▄ █ ▄▀  
  █  █▀▄ █▄▄ █ ▀█ █▄▀ █ █ ▀█ ▀▄█  */
- .trending-body{
+.trending-body {
     border-radius: 15px;
     background: white;
     padding: 25px;
- }
+    box-shadow: var(--shadow)
+}
 .each-trending {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -203,7 +207,6 @@
     grid-column: 2;
 }
 .each-trending > .user-name {
-    
     font-size: 0.9rem;
     color: rgb(83, 83, 83);
     grid-column: 2;
@@ -231,6 +234,7 @@
     border-left: 10px solid var(--secondary);
     padding: 25px;
     border-radius: 10px;
+    box-shadow: var(--shadow)
 }
 .projects .each-project .title {
     font-size: 1.2rem;
