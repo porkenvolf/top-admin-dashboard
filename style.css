@@ -61,7 +61,7 @@
     background: var(--grey);
     display: grid;
     grid-template-columns: 4fr 1fr;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr .1fr;
     padding: 25px;
     gap: 25px;
 }
@@ -183,19 +183,34 @@
     border-radius: 5px;
     background: #838383;
 }
+
+/* 
+▀█▀ █▀▄ ██▀ █▄ █ █▀▄ █ █▄ █ ▄▀  
+ █  █▀▄ █▄▄ █ ▀█ █▄▀ █ █ ▀█ ▀▄█  */
+ .trending-body{
+    border-radius: 15px;
+    background: white;
+    padding: 25px;
+ }
 .each-trending {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
-}
-.each-trending > .user-pic {
-    grid-row: 1 / -1;
+    align-content: center;
 }
 .each-trending > .handle {
+    align-self: end;
     grid-column: 2;
 }
 .each-trending > .user-name {
+    
+    font-size: 0.9rem;
+    color: rgb(83, 83, 83);
     grid-column: 2;
+}
+.each-trending .profile-pic {
+    width: 3.5rem;
+    grid-row: 1 / -1;
 }
 
 /* 
