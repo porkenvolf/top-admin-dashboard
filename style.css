@@ -12,6 +12,10 @@
     grid-template-rows: 1fr;
     /* overflow: hidden; */
 }
+.profile-pic {
+    aspect-ratio: 1/1;
+    border-radius: 100px;
+}
 
 /* 
 ▄▀▀ █ █▀▄ ██▀ ██▄ ▄▀▄ █▀▄ 
@@ -83,7 +87,6 @@
     min-height: 150px;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    
 }
 .header .icon {
     width: 1.5rem;
@@ -91,6 +94,7 @@
 .upper-header {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
 }
 .upper-header > input {
     flex: 1;
@@ -106,7 +110,7 @@
     border-radius: 50px;
     border: none;
     background-color: var(--grey);
-    margin: 0 50px;
+    margin: 0 1.5rem;
     padding: 20px;
 }
 .upper-header .profile-pic {
@@ -146,7 +150,6 @@
 ▄▀▄ █▄ █ █▄ █ ▄▀▄ █ █ █▄ █ ▄▀▀ ██▀ █▄ ▄█ ██▀ █▄ █ ▀█▀ ▄▀▀ 
 █▀█ █ ▀█ █ ▀█ ▀▄▀ ▀▄█ █ ▀█ ▀▄▄ █▄▄ █ ▀ █ █▄▄ █ ▀█  █  ▄█▀  */
 .announcements {
-
 }
 .announcements .announcements-body {
     display: grid;
@@ -189,14 +192,14 @@
 ▀█▀ █▀▄ ██▀ █▄ █ █▀▄ █ █▄ █ ▄▀  
  █  █▀▄ █▄▄ █ ▀█ █▄▀ █ █ ▀█ ▀▄█  */
 .trending-body {
-
     max-height: 90%;
     border-radius: 15px;
     background: white;
     padding: 25px;
-    box-shadow: var(--shadow)
+    box-shadow: var(--shadow);
 }
 .each-trending {
+    padding: 5px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 1fr;
@@ -212,7 +215,7 @@
     grid-column: 2;
 }
 .each-trending .profile-pic {
-    width: 3.5rem;
+    width: 3.1rem;
     grid-row: 1 / -1;
 }
 
@@ -229,6 +232,8 @@
     overflow-y: scroll;
     min-height: 0;
     max-height: 95%;
+    scrollbar-width: thin;
+    scrollbar-color: #838383 #b1b1b1;
 }
 .projects .each-project {
     display: grid;
@@ -236,8 +241,8 @@
     background-color: white;
     border-left: 10px solid var(--secondary);
     padding: 25px;
-    border-radius: 10px;127 
-    box-shadow: var(--shadow)
+    border-radius: 10px;
+    box-shadow: var(--shadow);
 }
 .projects .each-project .title {
     font-size: 1.2rem;
