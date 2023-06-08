@@ -15,6 +15,8 @@
 .profile-pic {
     aspect-ratio: 1/1;
     border-radius: 100px;
+    border: 0.2rem solid transparent;
+    outline: 0.2rem solid var(--primary);
 }
 
 /* 
@@ -25,9 +27,11 @@
     color: white;
     min-width: 18rem;
     display: grid;
-    align-content: start;
+    grid-template-rows: min-content min-content;
+    align-items: start;
     gap: 50px;
     padding: 25px;
+    padding-bottom: 0;
 }
 .sidebar > .title {
     font-size: 2rem;
@@ -54,6 +58,19 @@
     list-style-type: none;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+/* 
+█▀ ▄▀▄ ▄▀▄ ▀█▀ ██▀ █▀▄ 
+█▀ ▀▄▀ ▀▄▀  █  █▄▄ █▀▄  */
+footer {
+    align-self: end;
+    text-align: center;
+    padding: 10px;
+    color: var(--grey);
+}
+footer a{
+    color: var(--grey);
 }
 
 /* 
@@ -280,3 +297,4 @@
     border-radius: 5px;
     background: #838383;
 }
+
