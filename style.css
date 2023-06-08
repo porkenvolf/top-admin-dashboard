@@ -155,7 +155,8 @@
     display: grid;
     min-height: 0;
     min-width: 0;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     max-height: 90%;
     background-color: white;
     border-radius: 15px;
@@ -165,16 +166,19 @@
 }
 
 .each-announcement {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 .announcements .each-announcement .title {
+    display: flex;
     font-size: 1.2rem;
 }
 .announcements .each-announcement .text {
     font-size: 0.9rem;
     color: rgb(83, 83, 83);
+    padding-left: 1.8rem;
 }
 .announcements-body::-webkit-scrollbar {
+    
     height: 0px;
     width: 5px;
 }
@@ -186,6 +190,10 @@
 .announcements-body:hover::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: #838383;
+}
+.each-announcement img {
+    width: 1.2rem;
+    margin-right: 0.5rem;
 }
 
 /* 
